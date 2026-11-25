@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "ko-KR"
-title = "Report 4028"
+title = "Lab 4028"
 defaultContentLanguage = "ko"
 hasCJKLanguage = true
 summaryLength = 80
@@ -15,15 +15,18 @@ disableKinds = ["taxonomy", "term"]
 
 [menus]
   [[menus.main]]
-    name = "Report"
+    name = "Report 4028"
+    identifier = "report"
     pageRef = "/report"
     weight = 1
   [[menus.main]]
-    name = "Memo"
+    name = "Memo 4028"
+    identifier = "memo"
     pageRef = "/memo"
     weight = 2
   [[menus.main]]
     name = "About"
+    identifier = "about"
     pageRef = "/about"
     weight = 3
 
