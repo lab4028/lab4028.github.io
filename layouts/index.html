@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="eyebrow">Personal Economic Archive</p>
+  <h1>미국 주식과 경제를<br>기록합니다.</h1>
+  <p class="lead">주요 이슈를 깊게 다루는 <b class="c-report">Report</b>와 가볍게 남기는 <b class="c-memo">Memo</b>로 나눠 씁니다.</p>
+</section>
+
+<div class="columns">
+  <section>
+    <div class="sec-head"><h2 class="c-report">Report</h2><a href="{{ "report/" | relURL }}">전체 보기 →</a></div>
+    <ul class="post-list">
+      {{ range first 5 (where site.RegularPages "Section" "report") }}{{ partial "post-item.html" . }}{{ end }}
+    </ul>
+  </section>
+  <section>
+    <div class="sec-head"><h2 class="c-memo">Memo</h2><a href="{{ "memo/" | relURL }}">전체 보기 →</a></div>
+    <ul class="post-list">
+      {{ range first 5 (where site.RegularPages "Section" "memo") }}{{ partial "post-item.html" . }}{{ end }}
+    </ul>
+  </section>
+</div>
+{{ end }}

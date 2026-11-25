@@ -1,0 +1,10 @@
+<li class="post-item kind-{{ .Section }}">
+  <a href="{{ .RelPermalink }}">
+    <div class="meta">
+      <span class="tag">{{ if eq .Section "memo" }}Memo{{ else }}Report{{ end }}</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+    </div>
+    <h3>{{ .Title }}</h3>
+    {{ with .Description }}<p>{{ . }}</p>{{ else }}<p>{{ .Summary | plainify | truncate 90 }}</p>{{ end }}
+  </a>
+</li>

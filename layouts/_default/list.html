@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="list-head">
+  <h1 class="{{ if eq .Section "memo" }}c-memo{{ else }}c-report{{ end }}">{{ .Title }}</h1>
+  {{ with .Content }}<div class="lead">{{ . }}</div>{{ end }}
+</section>
+{{ range .Pages.GroupByDate "2006년" }}
+  <h2 class="year">{{ .Key }}</h2>
+  <ul class="post-list">
+    {{ range .Pages }}{{ partial "post-item.html" . }}{{ end }}
+  </ul>
+{{ end }}
+{{ end }}

@@ -1,0 +1,35 @@
+baseURL = "/"
+languageCode = "ko-KR"
+title = "Report 4028"
+defaultContentLanguage = "ko"
+hasCJKLanguage = true
+summaryLength = 80
+enableRobotsTXT = true
+
+# 방문자 통계·분석 도구 없음 (Google Analytics 등 넣지 않음)
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "미국 주식과 경제를 기록하는 개인 아카이브"
+  author = "Lim"
+
+[menus]
+  [[menus.main]]
+    name = "Report"
+    pageRef = "/report"
+    weight = 1
+  [[menus.main]]
+    name = "Memo"
+    pageRef = "/memo"
+    weight = 2
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 3
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses = true
+  style = "github"

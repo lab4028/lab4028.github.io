@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="post kind-{{ .Section }}">
+  <header class="post-head">
+    {{ if or (eq .Section "report") (eq .Section "memo") }}
+    <div class="meta">
+      <span class="tag">{{ if eq .Section "memo" }}Memo 4028{{ else }}Report 4028{{ end }}</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 1월 2일" }}</time>
+    </div>
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ with .Params.tickers }}<div class="tickers">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  {{ if or (eq .Section "report") (eq .Section "memo") }}
+  <nav class="post-nav">
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  </nav>
+  {{ end }}
+</article>
+{{ end }}

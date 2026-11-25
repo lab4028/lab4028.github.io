@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="{{ "/" | relURL }}">Report<span>4028</span></a>
+    <nav>
+      {{ $current := . }}
+      {{ range site.Menus.main }}
+        <a href="{{ .URL }}" class="nav-{{ lower .Name }}{{ if or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) (eq $current.Section (lower .Name)) }} active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>
