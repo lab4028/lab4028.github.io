@@ -110,5 +110,6 @@ main > .post-list:last-child { margin-bottom: 80px; }
   .hero h1 { font-size: 30px; }
   .columns { grid-template-columns: 1fr; gap: 48px; }
   .post-head h1 { font-size: 26px; }
-  nav { gap: 16px; }
+  nav { gap: 12px; font-size: 14px; }
+  .logo { font-size: 17px; }
 }
