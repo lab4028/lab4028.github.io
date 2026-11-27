@@ -1,0 +1,17 @@
+{{- /* 쓰는 법: {{< echart src="/charts/파일이름/02.json" img="/images/파일이름/02.png" alt="차트 설명" height="420" >}}
+       src: 차트 설정 JSON (ECharts option), img: 불러오기 실패 때 보여 줄 PNG, height: 픽셀 (기본 420) */ -}}
+{{- $src := .Get "src" -}}
+{{- $img := .Get "img" -}}
+{{- $alt := .Get "alt" | default "차트" -}}
+{{- $height := .Get "height" | default "420" -}}
+{{- if not (.Page.Store.Get "echartsLoaded") -}}
+{{- .Page.Store.Set "echartsLoaded" true -}}
+<script src="{{ "js/echarts.min.js" | relURL }}" defer></script>
+<script src="{{ "js/lab-echart.js" | relURL }}" defer></script>
+{{- end }}
+<figure class="echart-figure">
+  <div class="echart" data-src="{{ $src | relURL }}"{{ with $img }} data-img="{{ . | relURL }}"{{ end }} role="img" aria-label="{{ $alt }}" style="height: {{ $height }}px"></div>
+  {{- with $img }}
+  <noscript><img src="{{ . | relURL }}" alt="{{ $alt }}"></noscript>
+  {{- end }}
+</figure>

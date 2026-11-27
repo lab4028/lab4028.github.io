@@ -113,3 +113,8 @@ main > .post-list:last-child { margin-bottom: 80px; }
   nav { gap: 12px; font-size: 14px; }
   .logo { font-size: 17px; }
 }
+
+/* ECharts 차트 ({{< echart >}}) */
+.echart-figure { margin: 28px 0; }
+.echart { width: 100%; }
+.echart-error { display: flex; align-items: center; justify-content: center; color: var(--ink-2); background: #f6f7f9; font-size: 14px; }
