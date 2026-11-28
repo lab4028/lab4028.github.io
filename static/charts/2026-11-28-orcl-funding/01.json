@@ -1,0 +1,99 @@
+{
+  "title": {
+    "text": "오라클 2026년 조달 내역 (총액, 십억 달러)",
+    "subtext": "출처: 오라클 SEC 424B2·424B5,\nFY27 1분기 실적 발표, 2026년 조달 계획\n기준일: 2026-11-04 발행분까지",
+    "left": 0,
+    "top": 0,
+    "textStyle": {
+      "fontSize": 14,
+      "fontWeight": "bold"
+    },
+    "subtextStyle": {
+      "fontSize": 11,
+      "color": "#666666",
+      "lineHeight": 16
+    }
+  },
+  "grid": {
+    "left": 40,
+    "right": 8,
+    "top": 112,
+    "bottom": 118
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "axisPointer": {
+      "type": "shadow"
+    }
+  },
+  "xAxis": {
+    "type": "category",
+    "data": [
+      "2월\n채권",
+      "2월\n의무전환\n우선주",
+      "6~8월\nATM\n보통주",
+      "11월\n채권",
+      "11월\n보통주"
+    ],
+    "axisTick": {
+      "show": false
+    },
+    "axisLabel": {
+      "interval": 0,
+      "fontSize": 11,
+      "lineHeight": 14
+    }
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "십억 달러",
+    "nameTextStyle": {
+      "align": "left",
+      "color": "#666666"
+    },
+    "min": 0,
+    "max": 30
+  },
+  "series": [
+    {
+      "name": "조달액",
+      "type": "bar",
+      "data": [
+        "25",
+        "5",
+        "20",
+        "10",
+        "10"
+      ],
+      "label": {
+        "show": true,
+        "position": "top",
+        "fontSize": 10
+      }
+    }
+  ],
+  "graphic": [
+    {
+      "type": "text",
+      "right": 4,
+      "bottom": 4,
+      "style": {
+        "text": "Report 4028",
+        "fill": "#1f3a68",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "text",
+      "left": 0,
+      "bottom": 24,
+      "style": {
+        "text": "합계 약 70B 달러 (채권 35B + 주식·주식연계 35B).\n2월 계획은 45~50B 달러. ATM은 수수료 전, 나머지는 발행 총액.",
+        "fill": "#666666",
+        "fontSize": 10,
+        "lineHeight": 14
+      }
+    }
+  ]
+}

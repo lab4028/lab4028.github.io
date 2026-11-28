@@ -1,0 +1,39 @@
+{
+  "title": {
+    "text": "만기별 쿠폰 - 같은 날 국채 수익률 (추정, %p)",
+    "subtext": "출처: 각 사 SEC 424B2·FWP, 미국 재무부 · Lab 4028 계산\n기준일: 각 사 가격 결정일\n범례를 누르면 만기를 켜고 끌 수 있다 (처음에는 2033년 만기만)",
+    "left": 0,
+    "top": 0,
+    "textStyle": { "fontSize": 14, "fontWeight": "bold" },
+    "subtextStyle": { "fontSize": 11, "color": "#666666", "lineHeight": 16 }
+  },
+  "legend": {
+    "top": 84,
+    "left": 0,
+    "itemWidth": 14,
+    "itemHeight": 10,
+    "textStyle": { "fontSize": 11 },
+    "data": ["2029년 만기", "2031년 만기", "2033년 만기", "2046년 만기"],
+    "selected": { "2029년 만기": false, "2031년 만기": false, "2033년 만기": true, "2046년 만기": false }
+  },
+  "color": ["#a9bad6", "#4f6f9f", "#1f3a68", "#c0504d"],
+  "grid": { "left": 36, "right": 8, "top": 140, "bottom": 92 },
+  "tooltip": { "trigger": "axis", "axisPointer": { "type": "shadow" } },
+  "xAxis": {
+    "type": "category",
+    "data": ["오라클\n2/2", "메타\n4/30", "아마존\n7/7", "알파벳\n8/6", "MSFT\n10/29", "오라클\n11/2"],
+    "axisTick": { "show": false },
+    "axisLabel": { "interval": 0, "fontSize": 11, "lineHeight": 14 }
+  },
+  "yAxis": { "type": "value", "min": 0, "max": 3.5 },
+  "series": [
+    { "name": "2029년 만기", "type": "bar", "data": ["0.91", null, "0.42", "0.32", "0.27", "2.35"], "label": { "show": true, "position": "top", "fontSize": 10 } },
+    { "name": "2031년 만기", "type": "bar", "data": ["1.12", "0.53", "0.53", "0.48", "0.42", "2.75"], "label": { "show": true, "position": "top", "fontSize": 10 } },
+    { "name": "2033년 만기", "type": "bar", "data": ["1.30", "0.68", "0.70", "0.67", "0.48", "3.06"], "label": { "show": true, "position": "top", "fontSize": 10 } },
+    { "name": "2046년 만기", "type": "bar", "data": ["1.70", "1.23", "0.95", "1.03", "0.80", "3.34"], "label": { "show": true, "position": "top", "fontSize": 10 } }
+  ],
+  "graphic": [
+    { "type": "text", "left": 0, "bottom": 24, "style": { "text": "메타는 2029년 만기 채권을 발행하지 않았다.\n만기 대응: 2029→3년, 2031→5년, 2033→7년, 2046→20년 국채", "fill": "#666666", "fontSize": 10, "lineHeight": 14 } },
+    { "type": "text", "right": 4, "bottom": 4, "style": { "text": "Report 4028", "fill": "#1f3a68", "fontSize": 12, "fontWeight": "bold" } }
+  ]
+}
